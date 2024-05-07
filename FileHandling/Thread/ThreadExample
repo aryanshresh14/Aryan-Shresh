@@ -1,0 +1,32 @@
+class HelloThread implements Runnable {
+    public void run() {
+        for (int i=0; i<100000;i++)
+        System.out.println("Hello from a thread!";)
+    }
+}
+
+class SecondThread extends Thread {
+    public void run (){
+        for (int i=0; i<100000; i++)
+        System.out.println("Hello froma second Thread!");
+    }
+}
+
+public class ThreadExample {
+    public static void main(String[]args){
+
+    SecondThread st = new SecondThread();
+    st.start();
+
+        Thread t = new Thread(new Hello Thread());
+        t.start();
+
+        // Hello Thread t = new HelloThread();
+        // t.start();
+        // t.stop();
+        // t.start();
+
+        // SecondThread st = new SecondThread();
+        // st.start();
+    }
+}

@@ -1,0 +1,20 @@
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileOutputStreamExample {
+    public static void main(String[] args) {
+        String content = "Hello, FileOutputStream!";
+
+        try {
+            FileOutputStream fos = new FileOutputStream("output.txt");
+            
+            // Convert string to byte array and write to file
+            fos.write(content.getBytes());
+            
+            fos.close();
+            System.out.println("Data written to the file successfully!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
